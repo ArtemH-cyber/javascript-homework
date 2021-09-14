@@ -12,3 +12,28 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const listUl = document.getElementById("gallery")
+
+const makeMarkop = transaction => {
+
+  return `
+    <li>
+      <img class="width-img" src="${transaction.url}" alt="${transaction.alt}">
+    </li>
+    `
+}
+
+const result = images.map(makeMarkop).join('')
+
+listUl.insertAdjacentHTML('beforeend', result)
+
+
+
+
+
+
+
+
+
